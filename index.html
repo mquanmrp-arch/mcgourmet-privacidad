@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad y Seguridad – Mc Gourmet</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #fafaf8;
+      color: #1a1a18;
+      line-height: 1.7;
+    }
+
+    .wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    /* ── HEADER ── */
+    .site-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #e4e2dc;
+      margin-bottom: 2.5rem;
+    }
+
+    .logo-circle {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #fff0e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #c75000;
+      flex-shrink: 0;
+      border: 1px solid #ffd6b8;
+    }
+
+    .logo-text { line-height: 1.3; }
+    .logo-name { font-family: sans-serif; font-size: 18px; font-weight: 600; color: #1a1a18; }
+    .logo-sub  { font-family: sans-serif; font-size: 12px; color: #888; }
+
+    /* ── BADGE ── */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #e8f4fd;
+      color: #1565a8;
+      font-family: sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      padding: 4px 11px;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+      letter-spacing: 0.04em;
+    }
+    .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #1565a8; }
+
+    h1 {
+      font-size: 30px;
+      font-weight: normal;
+      color: #1a1a18;
+      margin-bottom: 0.4rem;
+      line-height: 1.25;
+    }
+
+    .meta-info {
+      font-family: sans-serif;
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 0;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: #f2f0e9;
+      border-radius: 10px;
+      padding: 1.4rem 1.6rem;
+      margin: 2rem 0;
+    }
+    .toc-title {
+      font-family: sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: #888;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.8rem;
+    }
+    .toc ol { padding-left: 1.2rem; }
+    .toc li { font-family: sans-serif; font-size: 14px; padding: 3px 0; }
+    .toc a  { color: #1565a8; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    /* ── SECTIONS ── */
+    .section {
+      margin-bottom: 2.8rem;
+      padding-bottom: 2.4rem;
+      border-bottom: 1px solid #e4e2dc;
+    }
+    .section:last-of-type { border-bottom: none; }
+
+    .section-num {
+      display: block;
+      font-family: sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: #bbb;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.35rem;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: normal;
+      color: #1a1a18;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 15.5px;
+      color: #3a3a36;
+      line-height: 1.8;
+      margin-bottom: 0.9rem;
+    }
+
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li {
+      font-size: 15.5px;
+      color: #3a3a36;
+      line-height: 1.8;
+      padding: 2px 0;
+    }
+
+    strong { font-weight: 600; color: #1a1a18; }
+
+    a { color: #1565a8; }
+    a:hover { text-decoration: underline; }
+
+    /* ── CALLOUT BOXES ── */
+    .box-info {
+      border-left: 3px solid #1565a8;
+      background: #e8f4fd;
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+    }
+    .box-info p { color: #1565a8; margin: 0; font-size: 14px; font-family: sans-serif; }
+
+    .box-success {
+      border-left: 3px solid #1a7a3f;
+      background: #eaf6ee;
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+    }
+    .box-success p { color: #1a7a3f; margin: 0; font-size: 14px; font-family: sans-serif; }
+
+    /* ── CHIPS ── */
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 1rem 0; }
+    .chip {
+      font-family: sans-serif;
+      font-size: 12px;
+      color: #555;
+      background: #f2f0e9;
+      border: 1px solid #ddd;
+      border-radius: 100px;
+      padding: 4px 12px;
+    }
+
+    /* ── CONTACT CARD ── */
+    .contact-card {
+      background: #fff;
+      border: 1px solid #e4e2dc;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .contact-row {
+      display: flex;
+      gap: 12px;
+      padding: 10px 1.25rem;
+      border-bottom: 1px solid #f0eee8;
+      font-family: sans-serif;
+      font-size: 14px;
+    }
+    .contact-row:last-child { border-bottom: none; }
+    .contact-label { color: #888; min-width: 120px; flex-shrink: 0; }
+    .contact-val   { color: #1a1a18; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      text-align: center;
+      font-family: sans-serif;
+      font-size: 12px;
+      color: #aaa;
+      padding-top: 2.5rem;
+      border-top: 1px solid #e4e2dc;
+      margin-top: 1rem;
+    }
+    .site-footer p + p { margin-top: 4px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .wrapper { padding: 2rem 1.25rem 4rem; }
+      h1 { font-size: 24px; }
+      .contact-row { flex-direction: column; gap: 2px; }
+      .contact-label { min-width: unset; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="logo-circle">MG</div>
+    <div class="logo-text">
+      <div class="logo-name">Mc Gourmet</div>
+      <div class="logo-sub">Aplicación de pedidos online</div>
+    </div>
+  </header>
+
+  <!-- TITLE BLOCK -->
+  <div class="badge"><span class="badge-dot"></span> Conforme con META &amp; WhatsApp Business API</div>
+  <h1>Política de Privacidad y Seguridad</h1>
+  <p class="meta-info">Última actualización: <span id="fecha"></span> &nbsp;·&nbsp; Versión 1.0</p>
+
+  <!-- TOC -->
+  <nav class="toc" aria-label="Índice de contenidos">
+    <div class="toc-title">ÍNDICE DE CONTENIDOS</div>
+    <ol>
+      <li><a href="#s1">Quiénes somos</a></li>
+      <li><a href="#s2">Datos que recopilamos</a></li>
+      <li><a href="#s3">Cómo usamos tus datos</a></li>
+      <li><a href="#s4">Uso de WhatsApp Business API</a></li>
+      <li><a href="#s5">Compartición con terceros</a></li>
+      <li><a href="#s6">Seguridad de la información</a></li>
+      <li><a href="#s7">Retención de datos</a></li>
+      <li><a href="#s8">Tus derechos</a></li>
+      <li><a href="#s9">Cambios a esta política</a></li>
+      <li><a href="#s10">Contacto</a></li>
+    </ol>
+  </nav>
+
+  <!-- SECCIÓN 1 -->
+  <div class="section" id="s1">
+    <span class="section-num">01</span>
+    <h2>Quiénes somos</h2>
+    <p><strong>Mc Gourmet</strong> (en adelante, "Mc Gourmet", "nosotros" o "la Empresa") es una aplicación de pedidos online de comida que permite a los usuarios realizar pedidos, recibir atención al cliente y acceder a promociones a través de nuestra plataforma y del canal de WhatsApp.</p>
+    <p>Esta Política de Privacidad describe cómo recopilamos, usamos, protegemos y compartimos la información personal que nos proporcionás al utilizar nuestros servicios, incluyendo la comunicación a través de la <strong>WhatsApp Business Platform</strong> de Meta Platforms, Inc.</p>
+    <p>Al utilizar Mc Gourmet o comunicarte con nosotros por WhatsApp, aceptás las prácticas descriptas en este documento.</p>
+  </div>
+
+  <!-- SECCIÓN 2 -->
+  <div class="section" id="s2">
+    <span class="section-num">02</span>
+    <h2>Datos que recopilamos</h2>
+    <p>En Mc Gourmet solo recopilamos los datos estrictamente necesarios para brindarte el servicio:</p>
+    <ul>
+      <li><strong>Nombre completo:</strong> para identificarte y personalizar tu experiencia de pedido.</li>
+      <li><strong>Número de teléfono (WhatsApp):</strong> para gestionar pedidos, enviar confirmaciones y atender consultas.</li>
+      <li><strong>Contenido de mensajes de WhatsApp:</strong> conversaciones relacionadas con pedidos, consultas o reclamos que iniciás a través del canal de WhatsApp Business.</li>
+      <li><strong>Historial de pedidos:</strong> registro de los pedidos realizados para mejorar tu experiencia y gestionar devoluciones o reclamos.</li>
+      <li><strong>Datos técnicos básicos:</strong> tipo de dispositivo y sistema operativo, utilizados de forma agregada para optimizar la aplicación.</li>
+    </ul>
+    <div class="box-info">
+      <p>No recopilamos datos de pago directamente. Las transacciones se procesan a través de pasarelas de pago certificadas y seguras.</p>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 3 -->
+  <div class="section" id="s3">
+    <span class="section-num">03</span>
+    <h2>Cómo usamos tus datos</h2>
+    <p>Usamos tu información exclusivamente para los siguientes fines:</p>
+    <ul>
+      <li><strong>Gestión de pedidos:</strong> procesar, confirmar y hacer seguimiento de tus pedidos de comida.</li>
+      <li><strong>Atención al cliente:</strong> responder consultas, resolver inconvenientes y gestionar reclamos a través de WhatsApp.</li>
+      <li><strong>Envío de promociones:</strong> enviarte ofertas, descuentos y novedades de Mc Gourmet, únicamente si diste tu consentimiento previo (opt-in).</li>
+      <li><strong>Mejora del servicio:</strong> analizar patrones de uso de forma anonimizada para optimizar la aplicación.</li>
+      <li><strong>Cumplimiento legal:</strong> cumplir con obligaciones legales y regulatorias aplicables en Argentina.</li>
+    </ul>
+    <div class="box-success">
+      <p>Nunca usaremos tus datos para fines distintos a los indicados sin tu consentimiento explícito y previo.</p>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 4 -->
+  <div class="section" id="s4">
+    <span class="section-num">04</span>
+    <h2>Uso de WhatsApp Business API</h2>
+    <p>Mc Gourmet utiliza la <strong>WhatsApp Business Platform</strong> provista por Meta Platforms, Inc. para gestionar pedidos, brindar atención al cliente y enviar promociones. Al comunicarte con nosotros por WhatsApp, aceptás también las <a href="https://www.whatsapp.com/legal/terms-of-service" target="_blank" rel="noopener">Condiciones del Servicio de WhatsApp</a> y la <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">Política de Privacidad de Meta</a>.</p>
+
+    <div class="chips">
+      <span class="chip">Solo mensajes con opt-in</span>
+      <span class="chip">Sin spam</span>
+      <span class="chip">Baja disponible siempre</span>
+      <span class="chip">Cifrado en tránsito</span>
+      <span class="chip">Cumplimiento de políticas META</span>
+    </div>
+
+    <p>Nuestros compromisos en el uso de WhatsApp:</p>
+    <ul>
+      <li>Solo te enviamos mensajes si optaste voluntariamente por recibirlos (<strong>opt-in</strong>).</li>
+      <li>Podés darte de baja en cualquier momento respondiendo <strong>STOP</strong> o <strong>BAJA</strong> por WhatsApp.</li>
+      <li>Los mensajes enviados son exclusivamente de carácter transaccional (confirmación de pedidos, estado de envío) o promocional con tu consentimiento.</li>
+      <li>No compartimos tu número de WhatsApp con terceros para fines publicitarios.</li>
+      <li>Cumplimos con las <a href="https://developers.facebook.com/docs/whatsapp/overview/policy-enforcement" target="_blank" rel="noopener">Políticas Comerciales de WhatsApp</a> y los estándares de uso de la plataforma de Meta.</li>
+      <li>No utilizamos WhatsApp para enviar contenido engañoso, ilegal o no solicitado.</li>
+    </ul>
+  </div>
+
+  <!-- SECCIÓN 5 -->
+  <div class="section" id="s5">
+    <span class="section-num">05</span>
+    <h2>Compartición con terceros</h2>
+    <p>Mc Gourmet <strong>no vende ni alquila</strong> tus datos personales. Podemos compartir información limitada con:</p>
+    <ul>
+      <li><strong>Meta Platforms, Inc.:</strong> como proveedor de la infraestructura de WhatsApp Business API.</li>
+      <li><strong>Proveedores de tecnología:</strong> empresas que nos asisten en el funcionamiento de la app (servidores, CRM, análisis), bajo acuerdos de confidencialidad estrictos.</li>
+      <li><strong>Socios de entrega:</strong> tu nombre y dirección de entrega pueden ser compartidos con el servicio de delivery para completar tu pedido.</li>
+      <li><strong>Autoridades competentes:</strong> cuando sea requerido por ley, orden judicial o autoridad regulatoria.</li>
+    </ul>
+  </div>
+
+  <!-- SECCIÓN 6 -->
+  <div class="section" id="s6">
+    <span class="section-num">06</span>
+    <h2>Seguridad de la información</h2>
+    <p>Implementamos medidas técnicas y organizativas para proteger tus datos:</p>
+    <ul>
+      <li>Cifrado en tránsito mediante <strong>TLS/HTTPS</strong> en todas las comunicaciones de la aplicación.</li>
+      <li>Acceso restringido a datos personales mediante control de roles y autenticación segura.</li>
+      <li>Monitoreo de actividades sospechosas y registros de acceso.</li>
+      <li>Actualizaciones regulares de seguridad en nuestra infraestructura.</li>
+      <li>Procedimientos de respuesta ante incidentes de seguridad.</li>
+    </ul>
+    <div class="box-info">
+      <p>En caso de una brecha de seguridad que afecte tus datos, te notificaremos dentro de los plazos establecidos por la legislación argentina (Ley 25.326 y normativa complementaria).</p>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 7 -->
+  <div class="section" id="s7">
+    <span class="section-num">07</span>
+    <h2>Retención de datos</h2>
+    <p>Conservamos tus datos personales únicamente durante el tiempo necesario para cumplir con los fines descriptos en esta política:</p>
+    <ul>
+      <li><strong>Historial de pedidos:</strong> hasta 5 años por obligaciones fiscales y contables.</li>
+      <li><strong>Conversaciones de WhatsApp:</strong> hasta 12 meses desde la última interacción, salvo requerimiento legal.</li>
+      <li><strong>Datos de contacto:</strong> mientras mantengas una cuenta activa en Mc Gourmet o hasta que solicites su eliminación.</li>
+    </ul>
+    <p>Una vez vencido el período de retención, tus datos serán eliminados o anonimizados de forma segura e irreversible.</p>
+  </div>
+
+  <!-- SECCIÓN 8 -->
+  <div class="section" id="s8">
+    <span class="section-num">08</span>
+    <h2>Tus derechos</h2>
+    <p>De acuerdo con la <strong>Ley 25.326 de Protección de Datos Personales</strong> de la República Argentina y normativa concordante, tenés derecho a:</p>
+    <ul>
+      <li><strong>Acceso:</strong> solicitar una copia de los datos personales que tenemos sobre vos.</li>
+      <li><strong>Rectificación:</strong> corregir datos incorrectos, inexactos o incompletos.</li>
+      <li><strong>Supresión:</strong> solicitar la eliminación de tus datos cuando ya no sean necesarios.</li>
+      <li><strong>Oposición:</strong> oponerte al tratamiento de tus datos en determinadas circunstancias.</li>
+      <li><strong>Revocación del consentimiento:</strong> retirar tu consentimiento para recibir comunicaciones en cualquier momento respondiendo BAJA por WhatsApp.</li>
+    </ul>
+    <p>Para ejercer cualquiera de estos derechos, podés contactarnos a través de los canales indicados en la sección 10. Responderemos tu solicitud dentro de los 30 días hábiles.</p>
+    <p>Tenés también el derecho de interponer una reclamación ante la <strong>Agencia de Acceso a la Información Pública (AAIP)</strong> si considerás que el tratamiento de tus datos no es conforme a la normativa vigente.</p>
+  </div>
+
+  <!-- SECCIÓN 9 -->
+  <div class="section" id="s9">
+    <span class="section-num">09</span>
+    <h2>Cambios a esta política</h2>
+    <p>Nos reservamos el derecho de actualizar esta Política de Privacidad cuando sea necesario. Ante cambios significativos, te notificaremos con al menos <strong>15 días de anticipación</strong> a través de la aplicación y/o por WhatsApp.</p>
+    <p>El uso continuado de Mc Gourmet después de la publicación de cambios implica tu aceptación de la política actualizada.</p>
+  </div>
+
+  <!-- SECCIÓN 10 -->
+  <div class="section" id="s10">
+    <span class="section-num">10</span>
+    <h2>Contacto</h2>
+    <p>Para consultas, ejercicio de derechos o reportar un problema de privacidad, contactanos por cualquiera de estos canales:</p>
+    <div class="contact-card">
+      <div class="contact-row">
+        <span class="contact-label">Empresa</span>
+        <span class="contact-val">Mc Gourmet</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">Responsable</span>
+        <!-- COMPLETAR: Nombre del responsable de datos -->
+        <span class="contact-val">[Mario Ramiro Pozo]</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">Email</span>
+        <!-- COMPLETAR: Email de privacidad -->
+        <span class="contact-val">[mcp.gourmet@gmail.com]</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">WhatsApp</span>
+        <!-- COMPLETAR: Número de WhatsApp -->
+        <span class="contact-val">[+54 9 261 674 1098]</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">Dirección</span>
+        <!-- COMPLETAR: Dirección legal -->
+        <span class="contact-val">[Derqui 13, Godoy Cruz (Mendoza), Argentina]</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">Horario</span>
+        <span class="contact-val">Lunes a viernes de 9 a 18 hs (ARG)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>Mc Gourmet · Política de Privacidad y Seguridad · Argentina</p>
+    <p>Esta es una plantilla. Consultá a un asesor legal antes de publicarla.</p>
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById('fecha').textContent = new Date().toLocaleDateString('es-AR', {
+    year: 'numeric', month: 'long', day: 'numeric'
+  });
+</script>
+</body>
+</html>
